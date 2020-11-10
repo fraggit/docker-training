@@ -6,8 +6,8 @@ services:
 language: bash
 
 before_script:
-    - "docker build -t $env:DOCKERID/autobuilds ."
-    - "docker container run --detach --publish 8080:80 $env:DOCKERID/autobuilds"
+    - "docker build -t frasci/autobuilds ."
+    - "docker container run --detach --publish 8080:80 frasci/autobuilds"
     - docker ps
 
 script:
